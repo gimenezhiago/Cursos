@@ -1,1 +1,2 @@
-print("Hello Word")
+nome = input("Digite seu nome")
+print(nome)
