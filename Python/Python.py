@@ -18,6 +18,13 @@ subtracao = x - y
 multiplicacao = x * y
 divisao = x / y
 potencia = x**2
+resto = x % 2
+maior = 11 > y
+maior_ou_igual = 11 >= y
+menor = y < 11
+menor_ou_igual = y <= 11 
+igual = 10 == x
+diferente = 9 != y 
 
 #Pegar o valor da variável
 nome = input("Digite seu nome:")
