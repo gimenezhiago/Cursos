@@ -26,5 +26,17 @@ menor_ou_igual = y <= 11
 igual = 10 == x
 diferente = 9 != y 
 
+#Operadores logícos
+e = and
+ou = or
+
 #Pegar o valor da variável
 nome = input("Digite seu nome:")
+
+#Condições if e else
+idade = 19
+if idade >= 18:
+    print('Maior de idade')
+else:
+    print('Menor de idade') 
+
