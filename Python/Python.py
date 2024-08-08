@@ -27,8 +27,8 @@ igual = 10 == x
 diferente = 9 != y 
 
 #Operadores logícos
-e = and
-ou = or
+##e = and
+##ou = or
 
 #Pegar o valor da variável
 nome = input("Digite seu nome:")
