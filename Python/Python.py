@@ -40,3 +40,10 @@ if idade >= 18:
 else:
     print('Menor de idade') 
 
+#Loops for com números
+for numero in range(0,5):
+    print(numero) 
+
+#loops for com letra
+for letra in 'batata':
+    print(letra)

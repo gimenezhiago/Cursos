@@ -1,9 +1,6 @@
-media = 7
+quantidade = 0
 
-if media >= 7:
-    print("Aprovado")
-else:
-    if media < 6:
-        print("Reprovado")
-    else:
-        print("Recuperação")
+for letra in 'batata':
+    if letra == 'a':
+        quantidade += 1
+print(quantidade)
