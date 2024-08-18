@@ -1,6 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
     //Código
-    printf()
+    printf("Hello Word!!!\n");
+
+    system("pause");
 }
