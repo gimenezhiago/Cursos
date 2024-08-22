@@ -44,6 +44,15 @@ else:
 for numero in range(0,5):
     print(numero) 
 
-#loops for com letra
+#Loops for com letra
 for letra in 'batata':
     print(letra)
+
+#Loops while 
+while nome != "sair":
+    nome = input('Digite seu nome novamente ou ent digite sair para sair: ')
+
+#Loops while infinito
+while idade >= 10:
+    print(idade)
+    idade = idade + 1

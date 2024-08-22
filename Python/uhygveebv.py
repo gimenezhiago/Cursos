@@ -1,6 +1,6 @@
-quantidade = 0
+idade = 10
+while idade >= 10:
+    print(idade)
+    idade = idade + 1
 
-for letra in 'batata':
-    if letra == 'a':
-        quantidade += 1
-print(quantidade)
+print("fora")
