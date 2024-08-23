@@ -17,8 +17,7 @@ values ('10', 'Tênis')
 select * from cliente;
 
 select idcpf as cpf, nome as n, email as e, cidade c 
-from pessoa as gente;
-
+from pessoa as gente; 
 
 -- Para encontrar
 select * from estoque as e
@@ -40,7 +39,6 @@ where idproduto in(1,3,6,7);
 
 select * from produto p 
 where nomepro like '%a%a%';
-
 
 -- Para ordenar
 select idcliente, idstatuscli, idcpf from cliente c 
