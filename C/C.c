@@ -1,7 +1,7 @@
 /*
 
 //Saída de dados 
-printf('oi')
+printf("oi");
 
 //Especificadores %
 d ou i = Z base decimal
@@ -11,6 +11,7 @@ e = Notação com casas decimais
 c = Texto letra
 s = Texto palavra
 .<num> = Quantos números dps virgula
+[^chars] = chars:coloque a palavra excluída
 
 //Escape
 \n = Quebra linha
@@ -27,5 +28,8 @@ s = Texto palavra
 \123 = Octal
 \x12 = Hexadecimal
 %% = %
+
+//Entrada de dados
+scanf("%d", &idade);
 
 */
