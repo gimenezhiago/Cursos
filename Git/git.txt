@@ -1,0 +1,2 @@
+dir = olhar o diretorio
+cd = abrir o doretorio
