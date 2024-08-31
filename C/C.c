@@ -32,4 +32,20 @@ s = Texto palavra
 //Entrada de dados
 scanf("%d", &idade);
 
+//Tipos de dados
+char - 8bits
+int(short) - 16bits
+int(long) - 32bits
+float - 32bits
+double - 64bits
+
+//Constante
+#define
+
+//Variável
+int idade = 0;
+float altura = 0.0;
+char nome[50] = "";
+
+
 */
