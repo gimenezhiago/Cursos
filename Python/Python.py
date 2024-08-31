@@ -56,3 +56,24 @@ while nome != "sair":
 while idade >= 10:
     print(idade)
     idade = idade + 1
+
+#Funções sem parâmetros
+def numerosAleatorios():
+    print(1)
+    print(3)
+    print(18)
+numerosAleatorios()
+
+#Funções com parâmetros
+def soma(n1, n2):
+    soma = n1 + n2
+    print(soma)
+soma(1,345)
+
+#Funções declarada em uma variável
+def soma(n1, n2):
+    soma = n1 + n2
+    return soma
+resultado = soma(1,345)
+resultado += 10
+print(resultado)
