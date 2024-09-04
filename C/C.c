@@ -47,5 +47,19 @@ int idade = 0;
 float altura = 0.0;
 char nome[50] = "";
 
+//Operações aritméticas
+Soma: +
+Subtração: -
+Multiplicação: *
+Divisão: /
+Resto: %
+
+//Atribuições aritméticas
+mais 1: ++
+menos 1: --
+Incremento: +=
+Decremento: -=
+com multi: *=
+com div: /=
 
 */
