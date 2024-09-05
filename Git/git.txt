@@ -1,5 +1,12 @@
 dir = olhar o diretorio
+ls = olha o diretorio
 cd = abrir o diretorio
 cd .. = fechar o diretorio
 mkdir = cria um diretorio
 git init = para transformar em git
+touch = criar arquivo
+rm = apaga arquivo
+git add = escrever no arquivo
+git add . = pronto pra committ
+git status = ver status
+git rm --cached = volta o estagio
