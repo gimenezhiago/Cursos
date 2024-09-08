@@ -10,3 +10,5 @@ git add = escrever no arquivo
 git add . = pronto pra committ
 git status = ver status
 git rm --cached = volta o estagio
+git commit = da commit
+git commit -m = commit com messagem
