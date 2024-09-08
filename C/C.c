@@ -62,4 +62,17 @@ Decremento: -=
 com multi: *=
 com div: /=
 
+//Lógico-relacionais
+maior: >
+maior ou igual: >=
+menor: <
+menor ou igual: <=
+igual: ==
+diferente: !=
+
+//Condição
+if (m >= 7.0) {
+		printf("Aprovado!\n");
+}
+
 */
