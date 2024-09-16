@@ -77,3 +77,11 @@ def soma(n1, n2):
 resultado = soma(1,345)
 resultado += 10
 print(resultado)
+
+#Vetores
+vetor = [4, 30, 23, 14, 89]
+print(vetor[2])
+
+#Mudar vetor
+vetor[2] = 6
+
