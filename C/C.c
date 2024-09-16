@@ -57,8 +57,8 @@ Resto: %
 //Atribuições aritméticas
 mais 1: ++
 menos 1: --
-Incremento: +=
-Decremento: -=
+incremento: +=
+decremento: -=
 com multi: *=
 com div: /=
 
@@ -74,5 +74,10 @@ diferente: !=
 if (m >= 7.0) {
 		printf("Aprovado!\n");
 }
+
+//Operadores lógicos
+conjução(e): &&
+disjunção(ou): ||
+inversão(não): !
 
 */
