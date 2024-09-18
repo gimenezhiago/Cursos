@@ -12,3 +12,4 @@ git status = ver status
 git rm --cached = volta o estagio
 git commit -m = commit com messagem
 git log = historico commit
+&& = junta comando
