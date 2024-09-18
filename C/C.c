@@ -75,6 +75,12 @@ if (m >= 7.0) {
 		printf("Aprovado!\n");
 }
 
+if (m >= 7.0) {
+		printf("Aprovado!\n");
+} else {
+		printf("Reprovado!\n");
+}
+
 //Operadores lógicos
 conjução(e): &&
 disjunção(ou): ||
