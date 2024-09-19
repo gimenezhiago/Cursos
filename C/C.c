@@ -86,4 +86,22 @@ conjução(e): &&
 disjunção(ou): ||
 inversão(não): !
 
+//Comando switch-case
+switch(d){
+	case 1:
+		printf("Domingo.\n");
+		break;
+	case 2:
+		printf("Segunda.\n");
+		break;
+	case 3:
+		printf("Terça.\n");
+		break;
+	case 4:
+		printf("Quarta.\n");
+		break;
+	default:
+		printf("Sem dia correspondente.\n");
+		break;
+	}
 */
