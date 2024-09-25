@@ -17,3 +17,5 @@ git checkout eb7f216 = volta o commit
 git checkout main = volta pro ultimo commit
 git revert "oi" = reverteu o commit
 git reset eb7f216 --hard = reseta o commit
+git branch = ver os branch
+git branch teste = novo branch
