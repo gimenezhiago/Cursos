@@ -104,4 +104,12 @@ switch(d){
 		printf("Sem dia correspondente.\n");
 		break;
 	}
+
+//Laço while
+	while(i<= 10) {
+		printf("%d ", i);
+		i++;
+	}
+
+
 */
