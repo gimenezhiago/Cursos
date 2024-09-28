@@ -85,3 +85,13 @@ print(vetor[2])
 #Mudar vetor
 vetor[2] = 6
 
+#Matrizes
+matriz = [{1, 2, 3}, {4, 5, 6}, {7, 8, 9}]
+print(matriz)
+
+#Printar cada linha da matris
+for i in range(0,3):
+    print(matriz[i])
+
+#Mudar matriz
+matriz[0][0] = 200
