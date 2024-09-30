@@ -111,5 +111,11 @@ switch(d){
 		i++;
 	}
 
+//Laço do-while
+	do{
+		printf("%d", i);
+		i++;
+	}while(i<= 10);
+
 
 */
