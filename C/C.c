@@ -1,5 +1,9 @@
 /*
 
+//Estrutura de menu
+int main(){
+}
+
 //Saída de dados 
 printf("oi");
 
@@ -106,16 +110,23 @@ switch(d){
 	}
 
 //Laço while
+	int i = 1;
 	while(i<= 10) {
 		printf("%d ", i);
 		i++;
 	}
 
 //Laço do-while
+	int i = 1;
 	do{
 		printf("%d", i);
 		i++;
 	}while(i<= 10);
 
+//Laço for
+	int h = 10;
+	for(int i=1; i<=h; i++){
+		printf("%d ", i);
+	}
 
 */
