@@ -6,3 +6,10 @@ console.log('Meu nome é "Hiago". Estou aprendendo JavaScript às', 10, 'da manh
 // Comentários
 //
 /* */ 
+
+// Juntar Html e Js
+/*<script></script>*/
+/*<script src="index.js"></script>*/
+
+// Para alertar
+window.alert("Olá Mundo")
