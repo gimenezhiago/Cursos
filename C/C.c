@@ -129,4 +129,13 @@ switch(d){
 		printf("%d ", i);
 	}
 
+//Break
+	if(i == 5) {
+		break;
+	}
+
+//Continue
+	if(i == 5) {
+		continue;
+	}
 */
