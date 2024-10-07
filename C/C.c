@@ -129,12 +129,12 @@ switch(d){
 		printf("%d ", i);
 	}
 
-//Break
+//Break, para interação no escopo
 	if(i == 5) {
 		break;
 	}
 
-//Continue
+//Continue, continua a interação próximo escopo
 	if(i == 5) {
 		continue;
 	}
