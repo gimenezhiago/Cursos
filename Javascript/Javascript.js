@@ -2,7 +2,6 @@
 console.log("Hello Word!!!")
 console.log(123456, 35.85)
 console.log('Meu nome é "Hiago". Estou aprendendo JavaScript às', 10, 'da manhã')
-
 // Comentários
 //
 /* */ 
@@ -13,3 +12,10 @@ console.log('Meu nome é "Hiago". Estou aprendendo JavaScript às', 10, 'da manh
 
 // Para alertar
 window.alert("Olá Mundo")
+
+// Para declarar variável
+let nome = "Hiago"
+var sobrenome = "Gimenez"
+
+// Para colocar a variável
+console.log("Meu nome é ", nome)
