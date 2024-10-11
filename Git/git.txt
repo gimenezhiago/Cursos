@@ -26,3 +26,4 @@ git remote add origin sjihdjjcjj = para adicionar apelido ao endereço
 git remote -v = ver os apelidos
 git clone shdsjbdj = clonar o repositorio
 git pull origin main = para dar pull
+git checkout -b teste = cria um branch e entra nele
