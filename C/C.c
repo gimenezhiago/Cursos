@@ -139,7 +139,7 @@ switch(d){
 		continue;
 	}
 
-//Arrays(vetores)
+//Arrays(vetores) com números
 int v[5];
 v[0] = 50;
 v[1] = 40;
@@ -149,4 +149,33 @@ v[4] = 10;
 int v[5] = {10, 20, 30, 40, 50};
 
 
+//Arrays com strings
+char s[10];
+
+//Pegar dado do teclado, para n dar erro com irmão de entrada 'descarga'
+fflush(stdin);
+
+//Scanf convencional para no espaço para arrays com strings
+	printf("Digite algo (scanf convencional):\n");
+	scanf("%s", s);
+	fflush(stdin); //pegar dado do teclado, para n dar erro com irmão de entrada
+
+//Scanf aprimorado com o espaço para arrays com strings
+	printf("Digite algo (scanf aprimorado):\n");
+	scanf("%10[^\n]s", s);
+	fflush(stdin);
+
+//Funções para entrada de dados
+	printf("Digite algo (scanf convencional):\n");
+	gets(s);
+	fflush(stdin);
+
+	printf("Digite algo (scanf aprimorado):\n");
+	fgets(s, 10, stdin);
+	fflush(stdin);
+
+//Função para saída de dados
+	puts("Resultado:");
+	puts(s);
+	puts("")
 */
