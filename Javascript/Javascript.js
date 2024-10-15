@@ -33,3 +33,6 @@ typeof nome
 
 //Contenação
 console.log(nome + sobrenome)
+
+//Template strings
+console.log(`${nome} ${sobrenome} tem ${idade} anos`);
