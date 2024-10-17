@@ -177,5 +177,15 @@ fflush(stdin);
 //Função para saída de dados
 	puts("Resultado:");
 	puts(s);
-	puts("")
+	puts("");
+
+//Biblioteca string.h
+	strcpy(destino,origem); //Muda o valor da string
+	strcat(); //Junta valores de strings
+	strlen{}; //Tamanho da string
+	strcmp{}; //Compara de é igual=0
+
+//Biblioteca locale.h
+	setlocale(LC_ALL,"Portuguese"); //Coloca acentos
+
 */
