@@ -36,3 +36,10 @@ console.log(nome + sobrenome)
 
 //Template strings
 console.log(`${nome} ${sobrenome} tem ${idade} anos`);
+
+//Dados Primitivos
+// String: "Hiago"
+// Number: 10 10.52
+// Undefined: Não tem na memória
+// Null: Nulo
+// Boolean: True or False
