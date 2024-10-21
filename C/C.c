@@ -182,8 +182,8 @@ fflush(stdin);
 //Biblioteca string.h
 	strcpy(destino,origem); //Muda o valor da string
 	strcat(); //Junta valores de strings
-	strlen{}; //Tamanho da string
-	strcmp{}; //Compara de é igual=0
+	strlen(); //Tamanho da string, caracteres
+	strcmp(); //Compara de é igual=0
 
 //Biblioteca locale.h
 	setlocale(LC_ALL,"Portuguese"); //Coloca acentos
