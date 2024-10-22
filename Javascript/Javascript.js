@@ -22,12 +22,6 @@ const idade = 16
 // Para colocar a variável
 console.log("Meu nome é ", nome)
 
-//Operadores Aritméticos
-// + = mais
-// - = menos
-// * = multiplicação
-// / = divisão
-
 //Descobrir a tipagem
 typeof nome
 
@@ -43,3 +37,52 @@ console.log(`${nome} ${sobrenome} tem ${idade} anos`);
 // Undefined: Não tem na memória
 // Null: Nulo
 // Boolean: True or False
+
+//Operadores Aritméticos
+// + = mais
+console.log(num1 + num2)
+// - = menos
+console.log(num1 - num2)
+// * = multiplicação
+console.log(num1 * num2)
+// / = divisão
+console.log(num1 / num2)
+// ** = potenciação
+console.log(num1**2)
+// % = resto da divisão inteiro
+console.log(num1 % num2)
+
+//Precedencia dos operadores
+/* 
+    ()
+    **
+    * / %
+    + -
+ */
+
+//Incremento e Decremento
+num++ //Soma 1
+++num //Soma primeiro
+num-- //Diminui 1
+--num //Diminui primeiro
+
+//Operadores de atribuição
+num += 2 //num = num + 2
+num *= 2 //num = num * 2
+num **=10 // num = num**10
+
+//NaN = Not a Number
+
+//Converte para number
+parseInt(variavel) //Somente para inteiros
+parseFloat(variavel) //Para números reais
+Number(variavel) //Para números reais
+
+
+
+
+
+
+
+
+
