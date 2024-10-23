@@ -13,6 +13,15 @@ console.log('Meu nome é "Hiago". Estou aprendendo JavaScript às', 10, 'da manh
 
 // Para alertar
 window.alert("Olá Mundo")
+alert("Olá Mundo!!!")
+
+// Para confirmar
+window.confirm("Deseja realmente apagar?")
+confirm("Deseja realmente apagar?")
+
+// Para digitar
+window.prompt("Digite seu cpf:")
+prompt("Digite seu cpf:")
 
 // Para declarar variável
 let nome = "Hiago"
