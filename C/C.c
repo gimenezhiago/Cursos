@@ -206,4 +206,20 @@ fflush(stdin);
 		printf("\n");
 	}
 
+//Struct(registros, pode mudar os tipos de variáveis)
+struct tipo_pessoa {
+	int idade;
+	float peso;
+	char nome[TAM];
+};
+
+//typedef(renomeia o struct)
+typedef struct tipo_pessoa tipo_pessoa;
+
+//Limpa a tela	
+system("cls");
+
+
+
+
 */
