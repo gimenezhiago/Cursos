@@ -219,7 +219,17 @@ typedef struct tipo_pessoa tipo_pessoa;
 //Limpa a tela	
 system("cls");
 
+//Colocando a Função 
+float maior(float num1, float num2) {
+	if(num1> num2){
+		return num1;
+	} else {
+		return num2;
+	}
+}
 
+//Chamando a Função
+	m = maior(x,y);
 
 
 */
