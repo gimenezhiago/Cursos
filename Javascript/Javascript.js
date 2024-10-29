@@ -87,6 +87,9 @@ parseInt(variavel) //Somente para inteiros
 parseFloat(variavel) //Para números reais
 Number(variavel) //Para números reais
 
+//Para mudar o valor das variáveis(sem conflito)
+[varA, varB, varC] = [varB, varC, varA]
+
 
 
 
