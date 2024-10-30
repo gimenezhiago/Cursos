@@ -231,5 +231,39 @@ float maior(float num1, float num2) {
 //Chamando a Função
 	m = maior(x,y);
 
+//Fazendo função com vetor e matriz
+void imprime1 (int v[], int n) {
+	int i;
+	for (i=0; i<n; i++) {
+		printf("%d ", v[i]);
+	}
+}
+
+void imprime2 (int v[5]) {
+	int i;
+	for (i=0; i<5; i++) {
+		printf("%d ", v[i]);
+	}
+}
+
+void imprime3 (int *v, int n) {
+	int i;
+	for (i=0; i<n; i++) {
+		printf("%d ", v[i]);
+	}
+}
+
+void imprime (int m[][4], int n) { //essa é matriz
+	int i, j;
+	for(i=0; i<n; i++) {
+		for(j=0; j<4; j++) {
+			printf("%d ", m[i][j]);
+		}
+		printf("\n");
+	}
+}
+
+//Protótipo da função
+float maior(float num1, float num2); //chama antes do main
 
 */
