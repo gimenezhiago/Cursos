@@ -266,4 +266,16 @@ void imprime (int m[][4], int n) { //essa é matriz
 //Protótipo da função
 float maior(float num1, float num2); //chama antes do main
 
+//Colocar parâmetros na função main
+int main(int argc, char *argv[])
+
+//Criar arquivos .h e .c
+main : Para chamar as funções
+	precisa dar um #include "_____.h" 
+
+.h : Para declarar as funções
+
+.c : Para definir os conteudos das funções
+	precisa dar um #include "_____.h" 
+
 */
