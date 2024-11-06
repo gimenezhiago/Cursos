@@ -36,6 +36,7 @@ typeof nome
 
 //Contenação
 console.log(nome + sobrenome)
+console.log(umaString.concat("em "," um lindo dia"))
 
 //Template strings
 console.log(`${nome} ${sobrenome} tem ${idade} anos`);
@@ -89,6 +90,50 @@ Number(variavel) //Para números reais
 
 //Para mudar o valor das variáveis(sem conflito)
 [varA, varB, varC] = [varB, varC, varA]
+
+//Para escapar o caracter 
+let umaString = "Um \"texto\"" // a barra invertida é usada como escape
+
+//Pegar um índice da string
+umaString[3]
+umaString.charAt(8)
+
+//Para saber o índice da string
+umaString.indexOf('texto')
+umaString.indexOf('o', 4) //depois do índice colocado
+
+//Para saber o índice de trás para frente
+umaString.lastIndexOf('m')
+
+//Expressão regular
+umaString.match(/[a-z]/g) //somente as letras minúsculas
+
+//Pesquisa o índice
+umaString.search(/x/g) //o g significa pegar todos 
+
+//Troca as palavras
+umaString.replace('Um', 'Outra')
+
+//Contar a quantidade de caracteres
+umaString.length
+
+//Para fatiar a string
+umaString.slice(2, 6)
+umaString.slice(-3) //negativo menos length
+umaString.substring(umaString.length - 5)
+
+//Para dividir uma string
+umaString.split(' ')
+umaString.split(' ', 2) //acontece o numero de vezes 
+
+//Para maiusculo
+umaString.toUpperCase()
+
+//Para minisculo
+umaString.toLowerCase()
+
+
+
 
 
 
