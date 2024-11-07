@@ -132,7 +132,12 @@ umaString.toUpperCase()
 //Para minisculo
 umaString.toLowerCase()
 
+//Para escrever na tela
+window.document.write('Alguma coisa')
 
+//Para escrever no html
+window.document.body.innerHTML = 'Qualquer outra coisa <br/>'
+document.body.innerHTML += 'Escrever'
 
 
 
