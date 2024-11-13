@@ -139,9 +139,18 @@ window.document.write('Alguma coisa')
 window.document.body.innerHTML = 'Qualquer outra coisa <br/>'
 document.body.innerHTML += 'Escrever'
 
+//Converter para string
+num1.toString()
+num1.toString(2) //Binário
 
+//Para colocar as casas decimais
+num1.toFixed(2)
 
+//Para ver se é inteiro
+Number.isInteger(num1)
 
+//Se é Não é um número
+Number.isNaN(temp)
 
 
 
