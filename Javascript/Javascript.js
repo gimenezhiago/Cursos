@@ -47,6 +47,7 @@ console.log(`${nome} ${sobrenome} tem ${idade} anos`);
 // Undefined: Não tem na memória
 // Null: Nulo
 // Boolean: True or False
+// Infinity: Infinito
 
 //Operadores Aritméticos
 // + = mais
@@ -151,6 +152,19 @@ Number.isInteger(num1)
 
 //Se é Não é um número
 Number.isNaN(temp)
+
+//Objeto Math
+Math.floor(num1) //Arredonda o valor para baixo
+Math.ceil(num1) //Arredonda o valor para cima
+Math.round(num1) //Arredonda para o mais perto
+Math.max(1, 2, 5, 3, 0) //Pega o maior
+Math.min(1, 2, 5, 3, 0) //Pega o menor
+Math.random() * (10 - 5) + 5 //Gera um número aleatorio entre 5 e 10
+Math.PI //Pi
+Math.pow(2, 10) // 2 ** 10
+
+//Verificar boleano
+!!(4/2)
 
 
 
