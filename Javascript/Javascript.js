@@ -169,7 +169,25 @@ Math.pow(2, 10) // 2 ** 10
 //Para pegar um elemento
 document.getElementById('numero')
 
+//Array
+const alunos = ['Luiz', 'Hiago', 'Luana', 18, 21, true]
 
+//Pegar ou modificar valor de array por índice
+console.log(alunos[0]) //Pega
+alunos[1] = 'Gimenez' //Modifica
+alunos[alunos.length] = 'Brizola' //Atualiza
 
+//Para atualizar
+alunos.push('Vieira') //No final
+alunos.unshift('Vieira') //No começo
 
+//Para remover
+alunos.pop() //Remove o final
+alunos.shift() //Remove o começo
+
+//Remove por índice
+delete alunos[1] //Fica branco dps de apagar
+
+//Perguntar se array é uma instância 
+console.log(alunos instanceof Array) //Boleano
 
