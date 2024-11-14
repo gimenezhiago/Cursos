@@ -166,6 +166,8 @@ Math.pow(2, 10) // 2 ** 10
 //Verificar boleano
 !!(4/2)
 
+//Para pegar um elemento
+document.getElementById('numero')
 
 
 
