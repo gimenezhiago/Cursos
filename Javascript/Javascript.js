@@ -191,3 +191,45 @@ delete alunos[1] //Fica branco dps de apagar
 //Perguntar se array é uma instância 
 console.log(alunos instanceof Array) //Boleano
 
+//Function
+function saudacao() {
+    console.log("Bom dia!!!")
+}
+
+//Chamar função
+saudacao()
+
+//Função com parâmetro
+function saudacao(nome) {
+    console.log(`Bom dia ${nome}`)
+}
+saudacao('Hiago')
+
+//Função que retorna
+function saudacao(nome) {
+    return `Bom dia ${nome}`
+}
+console.log(saudacao('Hiago'))
+
+//Função com valor pronto caso n receba valor
+function soma(x = 1, y = 1) {
+    const resultado = x + y
+    return resultado
+}
+console.log(soma())
+
+//Função Anônima
+const raiz = function (n) {
+    return n ** 0.5
+}
+console.log(raiz(9))
+
+//Arrow Function
+const raiz2 = (n) => { 
+    return n ** 0.5
+}
+console.log(raiz(9))
+
+
+
+
