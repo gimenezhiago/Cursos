@@ -230,6 +230,35 @@ const raiz2 = (n) => {
 }
 console.log(raiz(9))
 
+//Objeto
+const pessoa1 = {
+    nome: 'Hiago',
+    sobrenome: 'Gimenez',
+    idade: 16
+}
+
+//Acessar os atributos
+console.log(pessoa1.nome)
+
+//Função que cria objetos
+function criaObjetos(nome, sobrenome, idade) {
+    return {
+        nome: nome,
+        sobrenome: sobrenome,
+        idade: idade
+    }
+}
+function criaObjetos(nome, sobrenome, idade) {
+    return { nome, sobrenome, idade}
+}
+
+//Objeto com função
+const pessoa2 = {
+    nome: 'Hiago',
+    saudacao() {
+        console.log(`Olá ${this.nome}`)
+    }
+}
 
 
 
