@@ -41,7 +41,7 @@ console.log(umaString.concat("em "," um lindo dia"))
 //Template strings
 console.log(`${nome} ${sobrenome} tem ${idade} anos`);
 
-//Dados Primitivos
+//Dados Primitivos (imutáveis) - Valores copiados
 // String: "Hiago"
 // Number: 10 10.52
 // Undefined: Não tem na memória
@@ -260,5 +260,12 @@ const pessoa2 = {
     }
 }
 
+//Dados de Referência (mutável) - Passado por referência
+// Array: []
+// Object: {}
+// Function: function () 
 
+//Fazendo uma cópia, não por referência (Transformando em primitivo)
+let a = [1, 2, 3]
+let b = [...a]
 
