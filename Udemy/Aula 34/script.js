@@ -5,7 +5,7 @@ function meuEscopo() {
     const pessoa = []
     let x = 0
 
-    form.addEventListener('submit', recebeEventoForm())
+    form.addEventListener('submit', recebeEventoForm)
 
     function recebeEventoForm(evento) {
         evento.preventDefault();
