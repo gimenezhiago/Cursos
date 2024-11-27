@@ -269,3 +269,13 @@ const pessoa2 = {
 let a = [1, 2, 3]
 let b = [...a]
 
+//Para pegar variável de forma global
+const form = document.querySelector(".form")
+
+//Para pegar uma ação(evento) após algo
+form.onsubmit = function (evento) { //Pega a ação no caso é submitar
+    evento.preventDefault() //Ignora os comando do navegador (como atualizar)
+}
+
+//Pegar uma ação com addEventListener
+form.addEventListener('submit', recebeEventoForm())
