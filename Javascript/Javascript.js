@@ -69,7 +69,7 @@ console.log(num1 % num2)
     **
     * / %
     + -
- */
+*/
 
 //Incremento e Decremento
 num++ //Soma 1
