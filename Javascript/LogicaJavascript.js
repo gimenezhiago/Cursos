@@ -28,13 +28,13 @@ console.log("hiago" && 'Luana') //Como não tem nenhum falso retorna o último
 console.log(null || 'preto') //No || retorna o primeiro verdadeiro
 console.log(0 || null || false) //Como não tem nenhuma verdadeira retorna o último
 
-//If
+//If (SE)
 const hora = 10
 if (hora < 12) {
     console.log('Bom dia!!!')
 }
 
-//Else If
+//Else If (SENÃO SE)
 const horas = 11
 if (horas >= 0 && horas <= 11) {
     console.log('Bom dia!!!')
@@ -44,7 +44,7 @@ if (horas >= 0 && horas <= 11) {
     console.log('Boa noite!!!')
 }
 
-//Else
+//Else (SENÃO)
 const hr = 11
 if (hr >= 0 && hr <= 11) {
     console.log('Bom dia!!!')
