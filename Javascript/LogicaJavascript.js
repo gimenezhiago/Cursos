@@ -55,3 +55,17 @@ if (hr >= 0 && hr <= 11) {
 } else {
     console.log('Horário Inválido')
 }
+
+//Função para criar alguma tag
+const p = document.createElement('p')
+
+//Para colocar alguma tag como filha de outra
+res.appendChild(p) //Pai - Filho
+
+//Para dar uma classe à tag
+p.classList.add('res')
+
+//Target uma referência ao objeto que envia o evento 
+event.target.querySelector('#peso') //No caso está pegando a tag input
+
+
