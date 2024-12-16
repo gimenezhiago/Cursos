@@ -68,4 +68,35 @@ p.classList.add('res')
 //Target uma referência ao objeto que envia o evento 
 event.target.querySelector('#peso') //No caso está pegando a tag input
 
+//Operador ternário
+const pontuacao = 999
+const nivel = pontuacao >= 1000 ? 'Usuário VIP' : 'Usuário normal' // condição ? verdadeiro : falso
 
+//Objeto Date
+const data = new Date() //chamar a função construtora
+const data0 = new Date(0) // seria 01/01/1970 Timestamp unix, o número é em milisegundos
+const dataAtual = new Date(2024, 11, 16, 8, 20, 0) //a, m, d, h, M, s, ms, o mês começa do 0
+const dataAtual2 = new Date('2024-12-16 08:20:00')
+const dia = data.getDate() //o data vem da primeira constante
+const mes = data.getMonth()
+const ano = data.getFullYear()
+const horass = data.getHours()
+const minuto = data.getMinutes()
+const segundo = data.getSeconds()
+const milisegundo = data.getMilliseconds()
+const diaSemana = data.getDay()
+const milisegundoAgora = Date.now() //pega os milisegundos de agora
+
+//Formata data
+function formataData(data) {
+    const dia1 = data.getDate()
+    const mes1 = data.getMonth() + 1
+    const ano1 = data.getFullYear()
+    const horass1 = data.getHours()
+    const minuto1 = data.getMinutes()
+    const segundo1 = data.getSeconds()
+    return `${dia1}/${mes1}/${ano1} ${horass1}/${minuto1}/${segundo1}`
+}
+const data2 = new Date()
+const dataBrasil = formataData(data)
+console.log(dataBrasil)
