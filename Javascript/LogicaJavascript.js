@@ -101,6 +101,12 @@ const data2 = new Date()
 const dataBrasil = formataData(data)
 console.log(dataBrasil)
 
+//Como pegar horário padrão seguindo documentação
+const datinha = new Date()      //Segunda-feira, 17 de dezembro, 09:20
+console.log(data.toLocaleDateString('pt-BR', { dateStyle: 'full', timeStyle: 'short'}))
+
+
+
 //Switch/Case
 switch(diaSemana) {
     case 0:
