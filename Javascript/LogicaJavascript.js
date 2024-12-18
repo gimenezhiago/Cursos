@@ -137,4 +137,10 @@ switch(diaSemana) {
 //Let tem escopo de bloco { ... bloco }
 //Var só tem escopo de função (global)
 
+//Atribuição via desestruturação(arrays)
+const numeros = [1000, 2000, 3000, 4000, 5000] // ...(rest) ou ...(spread)
+const [primeiroNum, segundoNum, ... resto] = numeros //resto seria o resto do array
+const [um, , tres, , cinco] = numeros //esta pulando os valores
 
+const numerosArrays = [ [1, 2, 3], [4, 5, 6] ]
+const [ , [ , , seis]] = seis //6
