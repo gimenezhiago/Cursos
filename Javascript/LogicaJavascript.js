@@ -105,8 +105,6 @@ console.log(dataBrasil)
 const datinha = new Date()      //Segunda-feira, 17 de dezembro, 09:20
 console.log(data.toLocaleDateString('pt-BR', { dateStyle: 'full', timeStyle: 'short'}))
 
-
-
 //Switch/Case
 switch(diaSemana) {
     case 0:
@@ -135,6 +133,8 @@ switch(diaSemana) {
     break
 }
 
-
+//Diferença entre let e var
+//Let tem escopo de bloco { ... bloco }
+//Var só tem escopo de função (global)
 
 
