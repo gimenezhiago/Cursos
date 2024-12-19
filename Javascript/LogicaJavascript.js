@@ -144,3 +144,15 @@ const [um, , tres, , cinco] = numeros //esta pulando os valores
 
 const numerosArrays = [ [1, 2, 3], [4, 5, 6] ]
 const [ , [ , , seis]] = seis //6
+
+//Atribuição via desestruturação(objeto)
+const pessoa3 = {nome: 'hiago', sobrenome: 'gimenez', endereco: {rua: 'Av Brasil'}}
+const { nome, sobrenome } = pessoa3 //Extrai direto da chave
+const { idade = 16 } = pessoa3 //Pode ter um valor padrão
+const { peso: pessoinha  } = pessoa3 //Pode mudar o nome da variável
+const { endereco: {rua: r = 516} } = pessoa3 //Extraindo o objeto de um objeto
+const { nome: n, ...resto2 } = pessoa3 //Pegando o resto
+
+
+
+
