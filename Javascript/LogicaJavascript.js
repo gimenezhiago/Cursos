@@ -153,6 +153,11 @@ const { peso: pessoinha  } = pessoa3 //Pode mudar o nome da variável
 const { endereco: {rua: r = 516} } = pessoa3 //Extraindo o objeto de um objeto
 const { nome: n, ...resto2 } = pessoa3 //Pegando o resto
 
+//For
+for (let i = 0; i <= 5; i++) { //Inicialização;Condição;Incremento
+    console.log(i)
+}
+
 
 
 
