@@ -158,6 +158,8 @@ for (let i = 0; i <= 5; i++) { //Inicialização;Condição;Incremento
     console.log(i)
 }
 
+//InnerText, para escrever na tela, mas sem puxar a estilização
+nome.innerText = `Hiago Gimenez`
 
-
-
+//Para fazer um nó de texto
+let textoCriado = document.createTextNode('oiiiiiiiiiii')
