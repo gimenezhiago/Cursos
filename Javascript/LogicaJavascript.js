@@ -163,3 +163,6 @@ nome.innerText = `Hiago Gimenez`
 
 //Para fazer um nó de texto
 let textoCriado = document.createTextNode('oiiiiiiiiiii')
+
+//Como estilizar a tag pelo JavaScript
+h1.style.backgroundColor = 'red'
