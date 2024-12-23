@@ -166,3 +166,19 @@ let textoCriado = document.createTextNode('oiiiiiiiiiii')
 
 //Como estilizar a tag pelo JavaScript
 h1.style.backgroundColor = 'red'
+
+//For in (lê os índices ou chaves de objeto)
+const frutas = [banana, pera, uva]
+for (let i in frutas) {
+    console.log(frutas[i])
+}
+
+const humano = {nome: 'hiago', sobrenome: 'gimenez', idade: 16}
+for (let chave in humano) {
+    console.log(chave, humano[chave])
+}
+
+//Como pegar um atributo em obejto e array
+pessoa.nome //pega no objeto
+pessoa['nome'] //a mesma coisa
+frutas[2] //pega no array com indice
