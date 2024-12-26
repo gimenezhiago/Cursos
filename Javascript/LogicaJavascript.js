@@ -189,9 +189,12 @@ for (let valor of name) {
     console.log(valor)
 }
 
+//NodeList para pegar uma coleção (a coleção se torna como um array)
+paragrafos.querySelectorAll('p')
 
-
-
+//getComputedStyle para pegar a estilização de uma tag
+const estiloBody = getComputedStyle(document.body)
+const background = estiloBody.backgroundColor
 
 
 
