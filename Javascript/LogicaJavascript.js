@@ -182,3 +182,17 @@ for (let chave in humano) {
 pessoa.nome //pega no objeto
 pessoa['nome'] //a mesma coisa
 frutas[2] //pega no array com indice
+
+//For of (lê os valores)
+const name = 'Hiago' //Não funciona com objetos
+for (let valor of name) {
+    console.log(valor)
+}
+
+
+
+
+
+
+
+
