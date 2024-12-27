@@ -121,16 +121,16 @@ switch(diaSemana) {
         break
     case 4:
         diaSemanaTexto = 'Quinta'
-    break
+        break
     case 5:
         diaSemanaTexto = 'Sexta'
-    break
+        break
     case 6:
         diaSemanaTexto = 'Sábado'
-    break
+        break
     default:
         diaSemanaTexto = ''
-    break
+        break
 }
 
 //Diferença entre let e var
@@ -184,8 +184,8 @@ pessoa['nome'] //a mesma coisa
 frutas[2] //pega no array com indice
 
 //For of (lê os valores)
-const name = 'Hiago' //Não funciona com objetos
-for (let valor of name) {
+const name2 = 'Hiago' //Não funciona com objetos
+for (let valor of name2) {
     console.log(valor)
 }
 
@@ -195,6 +195,37 @@ paragrafos.querySelectorAll('p')
 //getComputedStyle para pegar a estilização de uma tag
 const estiloBody = getComputedStyle(document.body)
 const background = estiloBody.backgroundColor
+
+//While
+let i = 0 //Inicialização
+while (i <= 5) { //Condição
+    console.log(i)
+    i++ //Incremento
+}
+
+//Do While (sempre executa uma vez pelo menos)
+let i2 = 0 //Inicialização
+do {
+    console.log(i2)
+    i2++  //Incremento
+} while (i2 <= 5) //Condição
+
+//Continue (volta para o começo do laço, proxima interação)
+const numeros2 = [1, 2, 3, 4, 5, 6, 7]
+for (let numero of numeros2) { //No while e do while, semepre faça o incremento antes do continue
+    if (numero === 2) {
+        continue
+    }
+    console.log(numero)
+}
+
+//Break (para o laço, e sai do bloco)
+for (let numero of numeros2) {
+    if (numero === 7) {
+        break
+    }
+    console.log(numero)
+}
 
 
 
