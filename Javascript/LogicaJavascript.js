@@ -246,3 +246,11 @@ console.log(soma(1, 2))
 //Throw new Error ( serve para caracterizar o erro)
 throw new Error('a e b precisam ser number') //Esse Error tem varios tipos
 
+//Try e Catch e Finally
+try { //executa quando n tem erros
+    console.log("Fznd a função")
+} catch (err) { //executa quando tem erros
+    console.log('Tratando o erro')
+} finally { //executa sempre
+    console.log('Tenha um bom dia!!!')
+}
