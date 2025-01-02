@@ -227,6 +227,22 @@ for (let numero of numeros2) {
     console.log(numero)
 }
 
+//Try (tente caso erro) e Catch (use esse)
+try {
+    console.log(variavel)
+} catch(err) { //err é o erro
+    console.log('Esta variavel não existe')
+    console.log(err) //Este mostra o erro do js
+}
 
+//Throw (lançar um erro)
+function soma(a, b) {
+    if( typeof x !== 'number' || typeof y !== 'number') {
+        throw ('a e b precisam ser number')
+    }
+}
+console.log(soma(1, 2))
 
+//Throw new Error ( serve para caracterizar o erro)
+throw new Error('a e b precisam ser number') //Esse Error tem varios tipos
 
