@@ -65,6 +65,12 @@ res.appendChild(p) //Pai - Filho
 //Para dar uma classe à tag
 p.classList.add('res')
 
+//Para tirar uma classe à tag
+p.classList.remove('res')
+
+//Para verificar se contém essa clase
+p.classList.contains('res')
+
 //Target uma referência ao objeto que envia o evento 
 event.target.querySelector('#peso') //No caso está pegando a tag input
 
