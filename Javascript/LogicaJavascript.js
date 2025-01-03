@@ -237,13 +237,13 @@ try {
 
 //Throw (lançar um erro)
 function soma(a, b) {
-    if( typeof x !== 'number' || typeof y !== 'number') {
+    if( typeof a !== 'number' || typeof b !== 'number') {
         throw ('a e b precisam ser number')
     }
 }
 console.log(soma(1, 2))
 
-//Throw new Error ( serve para caracterizar o erro)
+//Throw new Error (serve para caracterizar o erro)
 throw new Error('a e b precisam ser number') //Esse Error tem varios tipos
 
 //Try e Catch e Finally
@@ -254,3 +254,17 @@ try { //executa quando n tem erros
 } finally { //executa sempre
     console.log('Tenha um bom dia!!!')
 }
+
+//setInterval (para fazer um intervalo em tempo)
+const timer = setInterval( function () {
+    console.log(mostraHora())
+}, 1000) //é em milisegundos
+
+//setTimeout (para fazer parar o intervalo) e clearInterval (para de rodar)
+setTimeout(() => {
+    clearInterval(timer)
+}, 10000) //esse é o tempo de intervalo
+
+
+
+
