@@ -271,6 +271,27 @@ setTimeout(() => {
     clearInterval(timer)
 }, 10000) //esse é o tempo de intervalo
 
+//focus (coloca em foco a tag)
+input.focus() //coloca foco no input
 
+//setAttribute (para atribuir algo)
+btn.setAttribute('class', 'apagar') //este adiciona uma classe
 
+//parentElement (para pegar o pai do elemento)
+elemento.parentElement
+elemento.parentElement.remove() //nesse caso esta removendo
 
+//trim (serve para remover os espaços no começo e no fim)
+elemento.trim()
+
+//Criar um Json de string
+const tarefasJson = JSON.stringify(listaTarefas)
+
+//Transformar o json em array
+const listaTarefas = JSON.parse(tarefas)
+
+//Salvar e criar local storage (seria um mini banco de dados no navegador)
+localStorage.setItem('tarefas', tarefasJson) //esse tarefas é o nome q ele recebera
+
+//Pegar os itens do local storage
+const tarefas = localStorage.getItem('tarefas')
