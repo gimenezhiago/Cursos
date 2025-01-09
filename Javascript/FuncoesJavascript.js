@@ -46,4 +46,17 @@ function funçao3 ([ nome, idade ]) {
 } 
 funçao2([ 'Hiago', 16 ])
 
-//
+//Return (Retorna um valor e termiana a função)
+function soma(a, b) {
+    return a + b
+}
+console.log(soma(1, 2)) //o console.log apenas exibe oq mandar
+
+//Função retona outra função
+function criaMulti(multi) {
+    return (n) => {
+        return n * multi
+    }
+}
+const duplica = criaMulti(2)
+console.log(duplica(2))
