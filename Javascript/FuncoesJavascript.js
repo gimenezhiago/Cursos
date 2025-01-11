@@ -60,3 +60,10 @@ function criaMulti(multi) {
 }
 const duplica = criaMulti(2)
 console.log(duplica(2))
+
+//Escopo léxico
+const nome = 'Hiago' //está no escopo global
+function falaNome() { //a preferência é o seu escopo para encontrar algo
+    console.log(nome) //escopo léxico, como n tem no seu escopo, ela vai procurando no escopo pai assim sucessivamente
+}
+falaNome()
