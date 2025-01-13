@@ -67,3 +67,16 @@ function falaNome() { //a preferência é o seu escopo para encontrar algo
     console.log(nome) //escopo léxico, como n tem no seu escopo, ela vai procurando no escopo pai assim sucessivamente
 }
 falaNome()
+
+//Closures
+function retornaFuncao() {
+    const nome = 'Hiago'
+    return function() {
+        return nome //o closure é oq da acesso ao escopo léxico externo
+    }
+}
+const fun = retornaFuncao()
+console.log(fun) //como n foi executada, faz igual o dir
+
+//Console.dir
+console.dir(fun) //exibe uma lista enterativa das propriedades
