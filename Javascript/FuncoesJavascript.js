@@ -80,3 +80,31 @@ console.log(fun) //como n foi executada, faz igual o dir
 
 //Console.dir
 console.dir(fun) //exibe uma lista enterativa das propriedades
+
+//Funções de callback (coisa que chama depois que termina algo)
+function f1(callback) {
+    setTimeout(() => { //simula algo que demora na web
+        console.log('f1')
+        if (callback) callback()
+    }, rand()) //aq sorteia o tempo q será executado
+}
+function f2(callback) {
+    setTimeout(() => {
+        console.log('f2')
+        if (callback) callback()
+    }, rand())
+}
+f1(() => { //esse é o callback porque independente do tempo ele será executado nessa ordem
+    f2(() => {
+        console.log('Fim') //esse callback é chamado de inferno
+    })
+})
+
+//Função callback sem arvore de natal
+f1(f1callback)
+function f1callback() {
+    f2(f2callback)
+}
+function f2callback() {
+    console.log('Fim')
+}
