@@ -108,3 +108,68 @@ function f1callback() {
 function f2callback() {
     console.log('Fim')
 }
+
+//IIFE - Immediately Invoked Function Expression
+(function() { //é uma função imediata
+    const name = 'Hiago' //ela n se junta com escopo global
+    console.log(name)
+})()
+
+//IIFE com parâmetros
+(function(idade, peso) { 
+    const name = 'Hiago' 
+    console.log(name + idade + peso)
+})(17, 73) //os valores dos parâmetros ficam aq
+
+//Factory Function
+function pessoa(nome, sobrenome, peso, altura) { //essas são como atribuição via desestruturação
+    return { 
+        nome, 
+        sobrenome,
+        fala: function(assunto) {
+            return `${this.nome} está ${assunto}` //this sempre refere ao objeto
+        }, //this - esse, ou seja, se refere a essa pessoa
+        peso,
+        altura,
+        imc() {
+            const i = this.peso / (this.altura ** 2)
+            return i.toFixed(2)
+        } 
+     }
+}
+const p1 = pessoa('hiago', 'gimenez', 75, 1,77) //a pessoa nesse caso é p1
+console.log(p1.fala('sobre factory'))
+console.log(p1.imc())
+
+//Passar uma função do objeto para um atributo (Getter) é Constructor Function
+function pessoa(peso, altura) {
+    return { 
+        peso,
+        altura,
+        get imc() { //não pode ter parâmetro
+            const ii = this.peso / (this.altura ** 2)
+            return ii.toFixed(2)
+        }
+    }
+}
+const p2 = pessoa('hiago', 'gimenez', 75, 1,77)
+console.log(p2.imc) //não precisa executar a função
+
+//Para setar o valor do atributo (Setter) é Constructor Function
+function pessoa(nome, sobrenome) {
+    return {
+        nome, 
+        sobrenome,
+        get nomeCompleto() {
+            return `${this.nome} ${this.sobrenome}`
+        },
+        set nomeCompleto(valor) { //tem q ter parâmetro
+            valor = valor.split(' ') //separa por espaço
+            this.nome = valor.shift() //pega o primeiro nome
+            this.sobrenome = valor.join('') //pega oq tem depois no caso ' '
+        }
+    }
+}
+const p3 = pessoa('hiago', 'vieira')
+p3.nomeCompleto = 'Hiago Gimenez' //aq passa um novo valor
+console.log(p3.nomeCompleto)
