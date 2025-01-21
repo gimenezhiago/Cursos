@@ -173,3 +173,16 @@ function pessoa(nome, sobrenome) {
 const p3 = pessoa('hiago', 'vieira')
 p3.nomeCompleto = 'Hiago Gimenez' //aq passa um novo valor
 console.log(p3.nomeCompleto)
+
+//bind
+function clickbtn() { //se for arrow function n precisa bind
+    document.addEventListener('click', function(event) {
+        const elemento = event.target
+        if (elemento.classList.contains('btn-num')) {
+            this.btnParaDisplay(elemento.innerText)
+        }
+    }.bind(this)) //esse bind fala pro this ser o pai do pai
+} //ou seja ele n vai ser o document mas sim o pai do document
+
+//Função eval (Ele executa tudo como fosse javascript, tudo que mandar)
+conta = eval(conta) //ele realiza a conta q for, ou comando
