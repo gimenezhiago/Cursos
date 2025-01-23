@@ -141,7 +141,7 @@ const p1 = pessoa('hiago', 'gimenez', 75, 1,77) //a pessoa nesse caso é p1
 console.log(p1.fala('sobre factory'))
 console.log(p1.imc())
 
-//Passar uma função do objeto para um atributo (Getter) é Constructor Function
+//Passar uma função do objeto para um atributo (Getter)
 function pessoa(peso, altura) {
     return { 
         peso,
@@ -155,7 +155,7 @@ function pessoa(peso, altura) {
 const p2 = pessoa('hiago', 'gimenez', 75, 1,77)
 console.log(p2.imc) //não precisa executar a função
 
-//Para setar o valor do atributo (Setter) é Constructor Function
+//Para setar o valor do atributo (Setter)
 function pessoa(nome, sobrenome) {
     return {
         nome, 
@@ -186,3 +186,16 @@ function clickbtn() { //se for arrow function n precisa bind
 
 //Função eval (Ele executa tudo como fosse javascript, tudo que mandar)
 conta = eval(conta) //ele realiza a conta q for, ou comando
+
+//Constructor Function (devolve um objeto como o a fábrica)
+function Pessoa(nome, sobrenome) { //tem q começar com letra maiuscula a Pessoa
+    this.nome = nome
+    this.sobrenome = sobrenome
+    this.metodo = () => {
+        console.log('oi' + this.nome)
+    }
+}
+const pessoa1 = new Pessoa('Hiago', 'Gimenez') //quando usa a função construtora tem q usar new
+pessoa1.metodo()
+
+
