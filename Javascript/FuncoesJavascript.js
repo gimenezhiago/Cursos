@@ -198,4 +198,9 @@ function Pessoa(nome, sobrenome) { //tem q começar com letra maiuscula a Pessoa
 const pessoa1 = new Pessoa('Hiago', 'Gimenez') //quando usa a função construtora tem q usar new
 pessoa1.metodo()
 
+//Funções recursivas
+function recursiva(max) {
+    if (mex > 10) return
+}
+
 
