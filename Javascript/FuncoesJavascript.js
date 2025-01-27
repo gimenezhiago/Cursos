@@ -199,8 +199,12 @@ const pessoa1 = new Pessoa('Hiago', 'Gimenez') //quando usa a função construto
 pessoa1.metodo()
 
 //Funções recursivas
-function recursiva(max) {
+function recursiva(max) { //é como um for
     if (mex > 10) return
+    max++
+    console.log(max)
+    recursiva(max) //ela se chama no final dela
 }
+recursiva(-10)
 
 
