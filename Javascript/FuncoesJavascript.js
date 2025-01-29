@@ -207,4 +207,25 @@ function recursiva(max) { //é como um for
 }
 recursiva(-10)
 
+//Funções geradoras
+function* geradora1() {
+    //codigo
+    yield 'valor 1'//é como um return a cada vez q chama a função utiliza o proximo yield
+    //codigo
+    yield 'valor 2' //mas n é um return pq o return termina a função
+    //codigo
+    yield 'valor 3' 
+}
+const g1 = geradora1()
+console.log(g1.next().value) //pula o yield
 
+function* geradora2() {
+    yield function() {
+        console.log('oi 1')
+    }
+    yield function() {
+        console.log('oi 2')
+    }
+}
+const g2 = geradora2()
+const funct = g2.next().value
