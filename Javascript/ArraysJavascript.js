@@ -37,3 +37,16 @@ const newee = eu.split(' ') //separando por espaço
 
 //join (para juntar valores)
 const newwe = eu.join(' ') //juntando por espaço
+
+//Maior número
+const maior = Number.MAX_VALUE
+
+//splice(indice, delete, elem1, elem2, elem3) 
+const removidos = nomes.splice(4, 1) //deleta o valor do indice 4
+const adicionados = nomes.splice(3, 0, 'marcia') //adiciona o valor no indice 3
+const pop = nomes.splice(nomes.length, 1)
+const shift = nomes.splice(0, 1)
+const push = nomes.splice(nomes.length, 0, 'hiago')
+const unshift = nomes.splice(0, 0, 'claudio')
+
+
