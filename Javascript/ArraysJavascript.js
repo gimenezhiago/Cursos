@@ -49,4 +49,11 @@ const shift = nomes.splice(0, 1)
 const push = nomes.splice(nomes.length, 0, 'hiago')
 const unshift = nomes.splice(0, 0, 'claudio')
 
+//Concatenando array
+const a1 = [1, 2, 3]
+const a2 = [4, 5, 6]
+console.log(a1.concat(a2)) //vai juntar os dois arrays e pode mandar mais arrays
+
+//spread
+const a3 = [...a1, 'hiago', ...a2, ...[1, 2, 3]] //juntou os dois arrays
 
