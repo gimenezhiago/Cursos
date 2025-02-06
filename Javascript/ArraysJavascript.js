@@ -57,3 +57,16 @@ console.log(a1.concat(a2)) //vai juntar os dois arrays e pode mandar mais arrays
 //spread
 const a3 = [...a1, 'hiago', ...a2, ...[1, 2, 3]] //juntou os dois arrays
 
+//Filter (retornar um array com os valores que passarem na condição)
+const numeros = [1, 2, 3, 4, 5, 6, 70, 80, 90]
+const maiorQueDez = numeros.filter(valor => valor > 10) //vai pegar os valores maiores que 10
+
+const p = [
+    { nome: 'hiago', idade: 20 },
+    { nome: 'luana', idade: 19 },
+    { nome: 'marcia', idade: 40 },
+]
+const pnew = p.filter(valor => valor.nome.length >= 5) //vai pegar os nomes com mais de 5 letras
+
+//endWith() (para verificar se termina com algo)
+nome.endsWith('o') //vai verificar se termina com o
