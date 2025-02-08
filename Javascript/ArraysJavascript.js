@@ -70,3 +70,16 @@ const pnew = p.filter(valor => valor.nome.length >= 5) //vai pegar os nomes com 
 
 //endWith() (para verificar se termina com algo)
 nome.endsWith('o') //vai verificar se termina com o
+
+//Map (para transformar os valores)
+const num = [16, 22, 3, 4, 50, 60, 7, 80, 9]
+const numDobro = num.map(valor => valor * 2) //vai dobrar os valores
+
+const ps = [
+    { nome:'Hiago', idade: 20 },
+    { nome:'Luana', idade: 19 },
+    { nome:'Claudio', idade: 40 },
+]
+const psNome = ps.map(obj => obj.nome) //vai pegar só os nomes
+
+
