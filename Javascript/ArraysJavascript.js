@@ -82,4 +82,14 @@ const ps = [
 ]
 const psNome = ps.map(obj => obj.nome) //vai pegar só os nomes
 
+//Reduce (para transformar os valores em um único valor)
+const total = num.reduce((acumulador, valor) => acumulador + valor, 0) //vai somar todos os valores
 
+const ps1 = [
+    { nome:'Hiago', idade: 20 },
+    { nome:'Luana', idade: 19 },
+]
+const maisVelha = ps1.reduce((acumulador, valor) => {
+    if(acumulador.idade > valor.idade) return acumulador
+    return valor
+}) //vai pegar a pessoa mais velha
