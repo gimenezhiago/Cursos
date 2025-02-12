@@ -93,3 +93,9 @@ const maisVelha = ps1.reduce((acumulador, valor) => {
     if(acumulador.idade > valor.idade) return acumulador
     return valor
 }) //vai pegar a pessoa mais velha
+
+//Filter, Map e Reduce
+const numPar = numeros
+.filter(valor => valor % 2 === 0)
+.map(valor => valor * 2)
+.reduce((acumulador, valor) => acumulador + valor) //vai pegar os valores pares, dobrar e somar
