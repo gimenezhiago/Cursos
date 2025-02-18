@@ -23,6 +23,9 @@ for (let chave in obj) {
     console.log(chave)
 }
 
+//Para congelar o objeto
+Object.freeze(obj)
+
 //Factory function (função que cria um objeto)
 function criaPessoa(nome, sobrenome) {
     return {
@@ -45,3 +48,45 @@ function Pessoa(nome, sobrenome) {
 }
 const p2 = new Pessoa('hiago', 'gimenez')
 Object.freeze(p2) //congela o objeto, n pode mudar
+
+//Obeject.keys (mostra as chaves)
+console.log(Object.keys(p2))
+
+//defineProperty (define uma propriedade)
+function Produto(nome, preco, estoque) {
+    this.nome = nome
+    this.preco = preco
+
+    Object.defineProperty(this, 'estoque', {
+        enumerable: true, //mostra a chave
+        value: estoque, //valor
+        writable: false, //não pode ser alterado
+        configurable: true //configurável
+    })
+}
+
+//defineProperties (define várias propriedades)
+function Produto1(nome, preco, estoque) {
+    Object.defineProperties(this, {
+        nome: {
+            enumerable: true,
+            value: nome,
+            writable: true,
+            configurable: true
+        },
+        preco: {
+            enumerable: true,
+            value: preco,
+            writable: true,
+            configurable: true
+        },
+        estoque: {
+            enumerable: true,
+            value: estoque,
+            writable: false,
+            configurable: true
+        }
+    })
+}
+
+
