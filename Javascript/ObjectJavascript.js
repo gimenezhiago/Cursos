@@ -89,4 +89,28 @@ function Produto1(nome, preco, estoque) {
     })
 }
 
+//Getter e Setter
+function Produto2(nome, preco, estoque) {
+    this.nome = nome
+    this.preco = preco
+    let estoquePrivado = estoque
+
+    Object.defineProperty(this, 'estoque', {
+        enumerable: true,
+        configurable: true,
+        get: function() { //pega o valor
+            return estoquePrivado //retorna o valor
+        },
+        set: function(valor) { //altera o valor
+            if (typeof valor !== 'number') {
+                throw new TypeError('valor inválido') //se não for número, retorna erro
+            }
+            estoquePrivado = valor
+        }
+    })
+}
+const p3 = new Produto2('camiseta', 20, 3)
+p3.estoque = 500 //altera o valor 
+console.log(p3)
+
 
