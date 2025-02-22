@@ -52,7 +52,13 @@ Object.freeze(p2) //congela o objeto, n pode mudar
 //Obeject.keys (mostra as chaves)
 console.log(Object.keys(p2))
 
-//defineProperty (define uma propriedade)
+//Object.values (mostra os valores)
+console.log(Object.values(p3))
+
+//Object.entries (mostra as chaves e valores)
+console.log(Object.entries(p3))
+
+//Object.defineProperty (define uma propriedade)
 function Produto(nome, preco, estoque) {
     this.nome = nome
     this.preco = preco
@@ -65,7 +71,7 @@ function Produto(nome, preco, estoque) {
     })
 }
 
-//defineProperties (define várias propriedades)
+//Object.defineProperties (define várias propriedades)
 function Produto1(nome, preco, estoque) {
     Object.defineProperties(this, {
         nome: {
@@ -112,5 +118,21 @@ function Produto2(nome, preco, estoque) {
 const p3 = new Produto2('camiseta', 20, 3)
 p3.estoque = 500 //altera o valor 
 console.log(p3)
+
+//Spread (Não é por referência)
+const a = { nome: 'hiago' }
+const b = { ...a }
+b.nome = 'claudio'    
+console.log(a) //vai mostrar hiago
+console.log(b) //vai mostrar claudio
+
+//Object.assign (copia um objeto)
+const c = { nome: 'hiago' } 
+const d = Object.assign({}, c, { nome: 'claudio' }) //copia o objeto
+console.log(c) //vai mostrar hiago
+console.log(d) //vai mostrar claudio
+
+//Object.getOwnPropertyDescriptor (mostra as propriedades)
+console.log(Object.getOwnPropertyDescriptor(p3, 'estoque'))
 
 
