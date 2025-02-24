@@ -135,4 +135,11 @@ console.log(d) //vai mostrar claudio
 //Object.getOwnPropertyDescriptor (mostra as propriedades)
 console.log(Object.getOwnPropertyDescriptor(p3, 'estoque'))
 
+//prototype (cadeia de métodos)
+Pessoa.prototype.inicio = 'OIIIII' //cria um __proto__ (método) dentro da função construtora
+Pessoa.prototype.nomeCompleto = function() {
+    return this.nome + ' ' + this.sobrenome
+}
+
+
 
