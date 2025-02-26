@@ -135,11 +135,25 @@ console.log(d) //vai mostrar claudio
 //Object.getOwnPropertyDescriptor (mostra as propriedades)
 console.log(Object.getOwnPropertyDescriptor(p3, 'estoque'))
 
-//prototype (cadeia de métodos)
+//Object.prototype (cadeia de métodos)
 Pessoa.prototype.inicio = 'OIIIII' //cria um __proto__ (método) dentro da função construtora
 Pessoa.prototype.nomeCompleto = function() {
     return this.nome + ' ' + this.sobrenome
 }
 
+//Object.setPrototypeOf (muda o __proto__)
+const objA = { chaveA: 'A' }
+const objB = { chaveB: 'B' }
+Object.setPrototypeOf(objB, objA) //muda o __proto__ de objB para objA
 
+//Object.getPrototypeOf (mostra o __proto__)
+console.log(Object.getPrototypeOf(objB))
+
+//Object.create (cria um objeto com __proto__)
+const objC = Object.create(objA, { tamanho:{
+    writable: true,
+    configurable: true,
+    enumerable: true,
+    value: 42
+} }) //cria um objeto com __proto__ de objA
 
