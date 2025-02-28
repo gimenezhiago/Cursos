@@ -157,3 +157,36 @@ const objC = Object.create(objA, { tamanho:{
     value: 42
 } }) //cria um objeto com __proto__ de objA
 
+//call()
+function Produto(nome, preco) {
+    this.nome = nome
+    this.preco = preco
+}
+function Carro(nome, preco) {
+    Produto.call(this, nome, preco) //chama o construtor de Produto
+    this.limpador = function() {
+        return 'limpando'
+    }
+}
+
+//Herança
+function Produto3(nome, preco) {
+    this.nome = nome
+    this.preco = preco
+}
+Produto3.prototype.aumento = function(quantia) {
+    this.preco += quantia
+}
+function Camiseta(nome, preco, cor) {
+    Produto3.call(this, nome, preco) //chama o construtor de Produto3
+    this.cor = cor
+}
+Camiseta.prototype = Object.create(Produto3.prototype) //herda o __proto__ de Produto3
+Camiseta.prototype.constructor = Camiseta //muda o construtor de Camiseta
+const camiseta = new Camiseta('regata', 7.5, 'preta')
+
+
+
+
+
+
