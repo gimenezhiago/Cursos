@@ -1,33 +1,43 @@
-const cpf = "070.987.720-03"
-const cpfLimpo = cpf.replace(/\D/g, "")
-const cpfArray = Array.from(cpfLimpo)
-
-function validarCpf1(cpfArray) {
-    for(let i = 10; i <= 2; i--) {
-        let total = cpfArray.reduce((ac, val) => {
-            ac += Number(val) * i
-            return ac
-        }, 0)
-        let digito = 11 - (total % 11)
-        if(digito > 9) digito = 0
-        cpfArray.push(digito)
-    }
-    return cpfArray
+function ValidaCPF(cpfEnviado) {
+    Object.defineProperty(this, 'cpfLimpo', {
+        enumerable: true,
+        get: function() {
+            return cpfEnviado.replace(/\D+/g, '');
+        }
+    });
 }
 
-function validarCpf2(cpfArray) {
-    for (let i = 11; i <= 2; i--) {
-        let total = cpfArray.reduce((ac, val) => {
-            ac += Number(val) * i
-            return ac
-        }, 0)
-        let digito = 11 - (total % 11)
-        if(digito > 9) digito = 0
-        cpfArray.push(digito)
-    }
-    return cpfArray
+ValidaCPF.prototype.valida = function() {
+    if (typeof this.cpfLimpo === 'undefined') return false
+    if (this.cpfLimpo.length !== 11) return false
+    if (this.isSequencia()) return false
+    const cpfParcial = this.cpfLimpo.slice(0, -2)
+    const digito1 = this.criaDigito(cpfParcial)
+    const digito2 = this.criaDigito(cpfParcial + digito1)
+    const novoCpf = cpfParcial + String(digito1) + String(digito2)
+    return novoCpf === this.cpfLimpo
 }
 
-console.log(validarCpf1(cpfArray))
-console.log(validarCpf2(cpfArray))
- 
+ValidaCPF.prototype.criaDigito = function(cpfParcial) {
+    const cpfArray = Array.from(cpfParcial)
+    let regressivo = cpfArray.length + 1 
+    const total = cpfArray.reduce((ac, val) => {
+        ac += (regressivo * Number(val))
+        regressivo--
+        return ac
+    }, 0)
+    const digito = 11 - (total % 11)
+    return digito > 9 ? 0 : digito
+}
+
+ValidaCPF.prototype.isSequencia = function() {
+    const sequencia = this.cpfLimpo[0].repeat(this.cpfLimpo.length)
+    return sequencia === this.cpfLimpo
+}
+
+const cpf = new ValidaCPF('705.484.450-52')
+if (cpf.valida()) {
+    console.log('CPF válido')
+} else {
+    console.log('CPF inválido')
+}
