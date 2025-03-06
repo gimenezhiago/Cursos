@@ -185,8 +185,53 @@ Camiseta.prototype = Object.create(Produto3.prototype) //herda o __proto__ de Pr
 Camiseta.prototype.constructor = Camiseta //muda o construtor de Camiseta
 const camiseta = new Camiseta('regata', 7.5, 'preta')
 
+//Polimorfismo
+function Conta(agencia, conta, saldo) { //superclasse
+    this.agencia = agencia
+    this.conta = conta
+    this.saldo = saldo
+}
+Conta.prototype.sacar = function(valor) {
+    if (this.saldo < valor) {
+        console.log('saldo insuficiente')
+        return
+    }
+    this.saldo -= valor
+    this.verSaldo()
+}
+Conta.prototype.depositar = function(valor) {
+    this.saldo += valor
+    this.verSaldo()
+}
+Conta.prototype.verSaldo = function() {
+    console.log(`ag/c: ${this.agencia}/${this.conta} | saldo: R$${this.saldo.toFixed(2)}`)
+}
+const conta = new Conta(11, 22, 10)
+conta.depositar(11)
+conta.sacar(10)
 
+function ContaCorrente(agencia, conta, saldo, limite) { //subclasse
+    Conta.call(this, agencia, conta, saldo) //chama o construtor de Conta
+    this.limite = limite
+}
+ContaCorrente.prototype = Object.create(Conta.prototype) //herda o __proto__ de Conta
+ContaCorrente.prototype.constructor = ContaCorrente //muda o construtor de ContaCorrente
+ContaCorrente.prototype.sacar = function(valor) {
+    if (this.saldo + this.limite < valor) {
+        console.log('saldo insuficiente')
+        return
+    }
+    this.saldo -= valor
+    this.verSaldo()
+}
+const cc = new ContaCorrente(11, 22, 0, 100)
+cc.depositar(10)
 
-
-
+function ContaPoupanca(agencia, conta, saldo) { //subclasse
+    Conta.call(this, agencia, conta, saldo)
+}
+ContaPoupanca.prototype = Object.create(Conta.prototype) //herda o __proto__ de Conta
+ContaPoupanca.prototype.constructor = ContaPoupanca //muda o construtor de ContaPoupanca
+const cp = new ContaPoupanca(12, 33, 0)
+cp.depositar(10)
 
