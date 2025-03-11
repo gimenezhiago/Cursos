@@ -235,3 +235,33 @@ ContaPoupanca.prototype.constructor = ContaPoupanca //muda o construtor de Conta
 const cp = new ContaPoupanca(12, 33, 0)
 cp.depositar(10)
 
+//Prototype com Factory Function
+const falar = {
+    falar() {
+        console.log(`${this.nome} está falando`)
+    }
+}
+const pessoaPrototype = { ...falar}
+function criaPessoa(nome, sobrenome) {
+    return Object.create(pessoaPrototype, { //cria um objeto com __proto__ de pessoaPrototype
+        nome: { value: nome },
+        sobrenome: { value: sobrenome }
+    })
+}
+
+//map()
+const pessoas = [
+    { id: 3, nome: 'hiago' },
+    { id: 2, nome: 'claudio' },
+    { id: 1, nome: 'marcia' }
+]
+const novasPessoas = new Map()
+for (const pessoa of pessoas) {
+    const { id } = pessoa //desestruturação
+    novasPessoas.set(id, { ...pessoa }) //cria um objeto com __proto__ de pessoa
+}
+console.log(novasPessoas.get(2))
+
+
+
+
