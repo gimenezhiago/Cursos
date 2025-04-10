@@ -39,3 +39,28 @@ class Carro {
 }
 const c1 = new Carro('Fusca')
 c1.velocidade = 2000 //não altera a velocidade, pois é privada
+
+//Herança com classes (extends)
+class DispositivoEletronico {
+    constructor(nome) {
+        this.nome = nome
+        this.ligado = false
+    }
+    ligar() { 
+        if(this.ligado) return
+        this.ligado = true
+    }
+    desligar() {
+        if(!this.ligado) return
+        this.ligado = false
+    }
+}
+class Smartphone extends DispositivoEletronico { //herda da classe DispositivoEletronico
+    constructor(nome, cor) {
+        super(nome) //chama o construtor da classe pai (DispositivoEletronico)
+        this.cor = cor
+    }
+}
+
+//super() (chama o construtor da classe pai)
+super(nome) //chama o construtor da classe pai (DispositivoEletronico)
