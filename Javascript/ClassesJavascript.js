@@ -64,3 +64,28 @@ class Smartphone extends DispositivoEletronico { //herda da classe DispositivoEl
 
 //super() (chama o construtor da classe pai)
 super(nome) //chama o construtor da classe pai (DispositivoEletronico)
+
+//Métodos estáticos (não podem ser chamados por instâncias)
+class ControleRemoto {
+    constructor(tv) {
+        this.tv = tv
+        this.volume = 0
+    }
+    static soma(a, b) { //método estático (não pode ser chamado por instâncias)
+        return a + b 
+    }
+    aumentarVolume() { //método de instância (pode ser chamado por instâncias)
+        this.volume += 2
+    }
+}
+const controle = new ControleRemoto('LG')
+controle.aumentarVolume() //aumenta o volume
+controle.volume //retorna o volume
+ControleRemoto.soma(2, 5) //chama o método estático (não pode ser chamado por instâncias)
+
+//Métodos de instância (podem ser chamados por instâncias)
+const controle2 = new ControleRemoto('Smasung')
+controle.aumentarVolume() //esta função pode ser chamada por instâncias
+
+
+
