@@ -87,5 +87,17 @@ ControleRemoto.soma(2, 5) //chama o método estático (não pode ser chamado por
 const controle2 = new ControleRemoto('Smasung')
 controle.aumentarVolume() //esta função pode ser chamada por instâncias
 
+//insertAdjacentElement (insere um elemento em relação a outro elemento)
+const elemento = document.querySelector('.elemento')
+const novoElemento = document.createElement('div')
+novoElemento.innerHTML = 'Novo elemento'
+elemento.insertAdjacentElement('afterend', novoElemento) //insere o novo elemento após o elemento selecionado
 
+//match (verifica se uma string contém outra string)
+const string = 'Olá, mundo!'
+const regex = /mundo/g //expressão regular (regex)
+const resultado = string.match(regex) //verifica se a string contém a expressão regular
 
+//previousElementSibling (retorna o elemento anterior ao elemento selecionado)
+const elemento2 = document.querySelector('.elemento2')
+const elementoAnterior = elemento2.previousElementSibling //retorna o elemento anterior ao elemento selecionado
