@@ -27,3 +27,60 @@ esperaAi('Frase 1', 3)
     .catch(e => {
         console.log('Erro:', e) // Exibe o erro se a Promise for rejeitada
     }) // Chama a função esperaAi e aguarda a rejeição da Promise
+
+//Promise.all (mostra o resultado de todas as Promises)
+const promises = ['Primeiro valor',
+     esperaAi('Promise 1', 5),
+     esperaAi('Promise 2', 2),
+     'Outro valor'
+]
+Promise.all(promises) // Aguarda todas as Promises serem resolvidas
+    .then(function(valor) {
+        console.log(valor)
+    })
+    .catch(function(erro) {
+        console.log(erro) // Exibe o erro se alguma Promise for rejeitada
+    })
+
+//Promise.race (mostra o resultado da primeira Promise resolvida)
+Promise.race(promises) // Aguarda a primeira Promise ser resolvida
+    .then(function(valor) {
+        console.log(valor) // Exibe o valor da primeira Promise resolvida
+    })
+    .catch(function(erro) {
+        console.log(erro) // Exibe o erro se alguma Promise for rejeitada
+    })
+
+//Promise.resolve (resolve uma Promise com um valor)
+function funcao() {
+    const emCache = true
+    if (emCache) {
+        return Promise.resolve('Valor em cache') // Retorna uma Promise resolvida com o valor em cache
+    } else {
+        return esperaAi('Valor em cache', 2) // Retorna uma Promise que aguarda o valor em cache
+    }
+}
+funcao()
+    .then(function(valor) {
+        console.log(valor) // Exibe o valor em cache
+    })
+    .catch(function(erro) {
+        console.log(erro) // Exibe o erro se a Promise for rejeitada
+    })
+
+//Promise.reject (rejeita uma Promise com um erro)
+function funcao2() {
+    const emCache = false
+    if (emCache) {
+        return Promise.reject('Valor em cache') // Retorna uma Promise resolvida com o valor em cache
+    } else {
+        return esperaAi('Valor em cache', 4) // Retorna uma Promise rejeitada com um erro
+    }
+}
+funcao2()
+    .then(function(valor) {
+        console.log(valor) // Exibe o valor em cache
+    })
+    .catch(function(erro) {
+        console.log(erro) // Exibe o erro se a Promise for rejeitada
+    })
