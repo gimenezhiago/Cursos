@@ -84,3 +84,25 @@ funcao2()
     .catch(function(erro) {
         console.log(erro) // Exibe o erro se a Promise for rejeitada
     })
+
+//Async/Await (simplifica o uso de Promises)
+async function executa() { // Declara uma função assíncrona
+    try { // Tenta executar o código dentro do bloco try
+        const fase1 = await esperaAi('fase 1', 3) // Aguarda a resolução da Promise
+        console.log(fase1) // Exibe a resposta da Promise
+        const fase2 = await esperaAi('fase 2', 2)
+        console.log(fase2) // Exibe a resposta da Promise
+        const fase3 = await esperaAi('fase 3', 1)
+        console.log(fase3) // Exibe a resposta da Promise
+    } catch (e) {
+        console.log(e) // Exibe o erro se a Promise for rejeitada
+    }
+}
+executa()
+
+//Estados da Promise
+/*
+Pending (pendente): A Promise está em andamento e ainda não foi resolvida ou rejeitada.
+fulfilled (cumprida): A Promise foi resolvida com sucesso.
+rejected (rejeitada): A Promise foi rejeitada com um erro.
+*/
