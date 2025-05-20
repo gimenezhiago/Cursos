@@ -106,3 +106,35 @@ Pending (pendente): A Promise está em andamento e ainda não foi resolvida ou r
 fulfilled (cumprida): A Promise foi resolvida com sucesso.
 rejected (rejeitada): A Promise foi rejeitada com um erro.
 */
+
+//XMLHttpRequest (XHR) (API para fazer requisições HTTP)
+const request = (obj) => { // Declara uma função que faz uma requisição HTTP
+    const xhr = new XMLHttpRequest() // Cria um novo objeto XMLHttpRequest
+    xhr.open(obj.method, obj.url, true) // Abre uma nova requisição com o método e URL especificados
+    xhr.send() // Envia a requisição
+
+    xhr.addEventListener('load', () => { // Adiciona um evento para quando a requisição for concluída
+        if (xhr.status >= 200 && xhr.status < 300) { // Verifica se o status da resposta é 2xx
+            obj.success(xhr.responseText) // Chama a função de sucesso com a resposta da requisição
+        } else {
+            obj.error(xhr.statusText) // Chama a função de erro com o status da resposta
+        }
+    })
+}
+
+//XMLHttpRequest (XHR) com Promises
+const request2 = (obj) => { // Declara uma função que faz uma requisição HTTP
+    return new Promise((resolve, reject) => { // Cria uma nova Promise
+        const xhr = new XMLHttpRequest() // Cria um novo objeto XMLHttpRequest
+        xhr.open(obj.method, obj.url, true) // Abre uma nova requisição com o método e URL especificados
+        xhr.send() // Envia a requisição
+
+        xhr.addEventListener('load', () => { // Adiciona um evento para quando a requisição for concluída
+            if (xhr.status >= 200 && xhr.status < 300) { // Verifica se o status da resposta é 2xx
+                resolve(xhr.responseText) // Resolve a Promise com a resposta da requisição
+            } else {
+                reject(xhr.statusText) // Rejeita a Promise com o status da resposta
+            }
+        })
+    })
+}
