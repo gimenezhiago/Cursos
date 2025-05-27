@@ -138,3 +138,18 @@ const request2 = (obj) => { // Declara uma função que faz uma requisição HTT
         })
     })
 }
+
+//fetch (API moderna para fazer requisições HTTP)
+fetch('pagina1.html') // Faz uma requisição para a URL especificada
+    .then((response) => {
+        if (response.status !== 200) { // Verifica se o status da resposta é 200 (OK)
+            throw new Error('Erro na requisição') // Lança um erro se a resposta não for OK
+        }
+        return response.text() // Retorna o corpo da resposta como texto
+    })
+    .then((html) => {
+        console.log(html) // Exibe o corpo da resposta
+    })
+    .catch((error) => {
+        console.error('Erro:', error) // Exibe o erro se a requisição falhar
+    })
