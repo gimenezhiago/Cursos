@@ -155,7 +155,7 @@ fetch('pagina1.html') // Faz uma requisição para a URL especificada
     })
 
 //Colocar axios no projeto
-<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+// tag script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"
 
 //axios (biblioteca para fazer requisições HTTP)
 axios('https://jsonplaceholder.typicode.com/posts') // Faz uma requisição para a URL especificada
