@@ -1,0 +1,17 @@
+[
+    {
+        "nome": "Ana Silva",
+        "idade": 28,
+        "email": "ana.silva@email.com"
+    },
+    {
+        "nome": "Carlos Souza",
+        "idade": 35,
+        "email": "carlos.souza@email.com"
+    },
+    {
+        "nome": "Mariana Oliveira",
+        "idade": 22,
+        "email": "mariana.oliveira@email.com"
+    }
+]

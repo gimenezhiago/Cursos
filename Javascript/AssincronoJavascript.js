@@ -153,3 +153,15 @@ fetch('pagina1.html') // Faz uma requisição para a URL especificada
     .catch((error) => {
         console.error('Erro:', error) // Exibe o erro se a requisição falhar
     })
+
+//Colocar axios no projeto
+<script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+//axios (biblioteca para fazer requisições HTTP)
+axios('https://jsonplaceholder.typicode.com/posts') // Faz uma requisição para a URL especificada
+    .then((response) => {
+        console.log(response.data) // Exibe os dados da resposta
+    })
+    .catch((error) => {
+        console.error('Erro:', error) // Exibe o erro se a requisição falhar
+    })
