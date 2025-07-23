@@ -1,4 +1,4 @@
-//exportando módulos
+//exportando e importando módulos
 export { nome, sobrenome, idade as age, soma } // Exporta as variáveis e funções para serem usadas em outros módulos
 import { nome as name, sobrenome, age, soma } from './modulo1.js' // Importa as variáveis e funções do módulo especificado
 
@@ -12,3 +12,9 @@ export default fazTudo // Exporta a função fazTudo como o export padrão do m�
 import fazTudo from './modulo1'// Importa a função fazTudo do módulo especificado
 
 import fazTudo, { nome as name, sobrenome, idade } from './modulo1.js' // Importa a função fazTudo está em default e as variáveis do módulo especificado
+
+// Tabela ASCII 
+String.fromCharCode(65) // Retorna 'A'
+String.fromCharCode(66) // Retorna 'B'
+
+
