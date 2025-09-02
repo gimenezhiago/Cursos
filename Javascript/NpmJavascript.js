@@ -55,6 +55,7 @@ const cami = path.resolve(__dirname, '..', 'arquivo.js') //caminho absoluto volt
 //npm install nome-do-pacote@0.0.0 (instala uma versão específica de um pacote)
 //npm install nome-do-pacote -E (instala um pacote e fixa a versão exata no package.json)
 //npm install nome-do-pacote --save-dev (instala um pacote como dependência de desenvolvimento)
+//npm install nome-do-pacote --save-prod (instala um pacote como dependência de produção)
 //npm update (atualiza todos os pacotes para a versão mais recente, respeitando as restrições do package.json)
 //npm uninstall nome-do-pacote (remove um pacote e atualiza o package.json)
 //npm list (lista todos os pacotes instalados no projeto)
