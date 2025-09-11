@@ -90,4 +90,17 @@ const cami = path.resolve(__dirname, '..', 'arquivo.js') //caminho absoluto volt
 //minor (atualizações com novas funcionalidades, mas compatíveis)
 //patch (atualizações de correção de bugs, sem novas funcionalidades)
 
+//fs (File System - para manipulação de arquivos e diretórios no Node.js)
+const fs = require('fs') //módulo nativo do Node.js para manipulação de arquivos e diretórios
+fs.readdir(path.resolve(__dirname)) //lê o conteúdo de um diretório
+    .then(arquivos => console.log(arquivos)) //lê o conteúdo de um diretório (retorna uma promessa)
+    .catch(erro => console.log(erro))
+fs.stat(path.resolve(__dirname, 'arquivo.js')) //obtém informações sobre um arquivo ou diretório
+stats.isDirectory() //verifica se é um diretório
+stats.isFile() //verifica se é um arquivo
+
+//RegExp (Expressões Regulares - para trabalhar com padrões de texto no JavaScript)
+/\.git/g.test('arquivo.git') //verifica se o arquivo tem a extensão .git (retorna true ou false)
+/\.txt/g.test('arquivo.git') //verifica se o arquivo tem a extensão .txt (retorna true ou false)
+/\node_modules/g.test('arquivo.node_modules') //verifica se o arquivo tem a extensão .node_modules (retorna true ou false)
 
