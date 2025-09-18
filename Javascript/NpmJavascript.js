@@ -98,6 +98,8 @@ fs.readdir(path.resolve(__dirname)) //lê o conteúdo de um diretório
 fs.stat(path.resolve(__dirname, 'arquivo.js')) //obtém informações sobre um arquivo ou diretório
 stats.isDirectory() //verifica se é um diretório
 stats.isFile() //verifica se é um arquivo
+fs.writeFile(path.resolve(__dirname, 'arquivo.txt'), 'Conteúdo do arquivo', { flag: 'w'}) //escreve em um arquivo (cria o arquivo se não existir), w (write) - cria ou sobrescreve o arquivo, a (append) - adiciona ao final do arquivo
+fs.readFile(path.resolve(__dirname, 'arquivo.txt'), 'utf8') //lê o conteúdo de um arquivo (retorna uma promessa)
 
 //RegExp (Expressões Regulares - para trabalhar com padrões de texto no JavaScript)
 /\.git/g.test('arquivo.git') //verifica se o arquivo tem a extensão .git (retorna true ou false)
