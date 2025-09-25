@@ -106,3 +106,19 @@ fs.readFile(path.resolve(__dirname, 'arquivo.txt'), 'utf8') //lê o conteúdo de
 /\.txt/g.test('arquivo.git') //verifica se o arquivo tem a extensão .txt (retorna true ou false)
 /\node_modules/g.test('arquivo.node_modules') //verifica se o arquivo tem a extensão .node_modules (retorna true ou false)
 
+//Instalar o express (framework web para Node.js)
+//npm install express
+const express = require('express') //importa o express
+const app = express() //cria uma instância do express
+
+//CRUD (Create(POST), Read(GET), Update(PUT), Delete(DELETE) - operações básicas de um sistema)
+
+//GET
+app.get('/', (req, res) => {
+    res.send('Hello World!') //envia uma resposta para o cliente
+})
+
+//Listen (para iniciar o servidor, ouvindo na porta)
+app.listen(3000, () => {
+    console.log('Servidor rodando na porta 3000')
+})
