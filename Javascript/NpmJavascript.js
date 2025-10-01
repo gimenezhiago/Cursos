@@ -118,7 +118,17 @@ app.get('/', (req, res) => {
     res.send('Hello World!') //envia uma resposta para o cliente
 })
 
+//POST
+app.post('/', (req, res) => {
+    res.send('Recebi um POST!') //envia uma resposta para o cliente
+})
+
 //Listen (para iniciar o servidor, ouvindo na porta)
 app.listen(3000, () => {
     console.log('Servidor rodando na porta 3000')
 })
+
+//Nodemon (ferramenta para reiniciar o servidor automaticamente ao salvar alterações)
+//npm install nodemon --save-dev (instala o nodemon como dependência de desenvolvimento)
+//nodemon index.js (inicia o servidor com nodemon)
+//npx nodemon index.js (inicia o servidor com nodemon sem instalar globalmente)
