@@ -132,3 +132,27 @@ app.listen(3000, () => {
 //npm install nodemon --save-dev (instala o nodemon como dependência de desenvolvimento)
 //nodemon index.js (inicia o servidor com nodemon)
 //npx nodemon index.js (inicia o servidor com nodemon sem instalar globalmente)
+
+//req.params (para obter parâmetros da rota)
+app.get('/usuario/:id', (req, res) => { //exemplo: /usuario/123
+    res.send(`Usuário ${req.params.id}`) //envia uma resposta para o cliente com o id do usuário
+})
+
+//req.params (para obter parâmetros da rota opcionais)
+app.get('/usuario/:id?', (req, res) => { //o ? torna o parâmetro opcional
+    res.send(`Usuário ${req.params.id}`) //envia uma resposta para o cliente com o id do usuário
+})
+
+//req.query (para obter query strings da URL)
+app.get('/usuario', (req, res) => { //exemplo: /usuario?nome=Luiz&&idade=30
+    res.send(`Usuário ${req.query.nome}`) //envia uma resposta para o cliente com o nome do usuário
+})
+
+//req.body (para obter dados enviados no corpo da requisição)
+app.use(express.json()) //habilita o express para ler JSON no corpo da requisição
+app.use(express.urlencoded({ extended: true })) //habilita o express para ler dados de formulários no corpo da requisição
+app.post('/usuario', (req, res) => { //exemplo: { "nome": "Luiz" }
+    res.send(`Usuário ${req.body.nome} criado!`) //envia uma resposta para o cliente com o nome do usuário
+}) 
+
+
