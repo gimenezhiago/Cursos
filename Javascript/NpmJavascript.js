@@ -74,7 +74,7 @@ const cami = path.resolve(__dirname, '..', 'arquivo.js') //caminho absoluto volt
     },
     "author": "Seu Nome", //autor do projeto
     "license": "ISC", //licença do projeto
-    "dependencies": { //dependências do projet{
+    "dependencies": { //dependências do projeto
     }
     "devDependencies": { //dependências de desenvolvimento
     }
@@ -155,4 +155,18 @@ app.post('/usuario', (req, res) => { //exemplo: { "nome": "Luiz" }
     res.send(`Usuário ${req.body.nome} criado!`) //envia uma resposta para o cliente com o nome do usuário
 }) 
 
+//Padrão MVC (Model-View-Controller - padrão de arquitetura para organizar o código)
+//Model (responsável pela lógica de dados e regras de negócio)
+//View (responsável pela interface com o usuário, pode ser uma API ou páginas HTML)
+//Controller (responsável por intermediar a comunicação entre Model e View, processando as requisições e respostas)
 
+//Routes (definição das rotas da aplicação)
+const express = require('express')
+const router = express.Router() //cria uma instância do roteador do express
+const homeController = require('./controllers/homeController') //importa o controller
+router.get('/', homeController.paginaInicial) //define a rota para a página inicial
+
+//Controller (importa o controller)
+exports.paginaInicial = (req , res) => {
+    res.send('Olá Mundo!')
+}
