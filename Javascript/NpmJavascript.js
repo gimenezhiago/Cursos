@@ -166,7 +166,55 @@ const router = express.Router() //cria uma instância do roteador do express
 const homeController = require('./controllers/homeController') //importa o controller
 router.get('/', homeController.paginaInicial) //define a rota para a página inicial
 
-//Controller (importa o controller)
+//Controller (exporta o controller)
 exports.paginaInicial = (req , res) => {
     res.send('Olá Mundo!')
 }
+
+//View (renderiza a view, se aplicável)
+app.set('views', path.resolve(__dirname, 'views')) //define o diretório das views
+app.set('view engine', 'ejs') //define o motor de template (exemplo: EJS)
+
+//EJS (motor de template para gerar HTML dinâmico)
+//npm install ejs (instala o EJS como dependência do projeto)
+
+//Controller com EJS (renderiza a view index.ejs)
+exports.paginaInicial = (req , res) => {
+    res.render('index', { nome: 'Luiz' }) //renderiza a view index.ejs, passando o nome como variável
+}
+
+//Estrtutura de pastas (exemplo de organização do projeto)
+//meu-projeto
+//└───node_modules
+//└───public
+//│   ├───css
+//│   │       styles.css
+//│   │
+//│   ├───js
+//│   │       scripts.js
+//│   │
+//│   └───images
+//│           logo.png
+//│
+//└───src
+//│   │   server.js
+//│   │
+//│   ├───controllers
+//│   │       homeController.js 
+//│   │
+//│   ├───models
+//│   │       usuarioModel.js
+//│   │
+//│   ├───routes
+//│   │       routes.js
+//│   │
+//│   └───views
+//│           index.ejs
+//│
+//└───package.json
+//└───package-lock.json
+//└───.gitignore
+//└───README.md
+//└───.env
+//└───.env.example
+
