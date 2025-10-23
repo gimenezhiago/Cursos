@@ -218,3 +218,6 @@ exports.paginaInicial = (req , res) => {
 //└───.env
 //└───.env.example
 
+//Conteúdo estático (public)
+ app.use(express.static(path.resolve(__dirname, 'public')))
+
