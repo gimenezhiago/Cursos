@@ -196,7 +196,7 @@ exports.paginaInicial = (req , res) => {
 //│   └───images
 //│           logo.png
 //│
-//└───src
+//└───src (back-end)
 //│   │   server.js
 //│   │
 //│   ├───controllers
