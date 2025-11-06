@@ -221,3 +221,14 @@ exports.paginaInicial = (req , res) => {
 //Conteúdo estático (public)
  app.use(express.static(path.resolve(__dirname, 'public')))
 
+//Midleware (função que intercepta requisições e respostas no Express)
+function meuMiddleware(req, res, next) { //next é uma função que chama o próximo middleware
+    console.log('Passei no middleware!')
+    next() //chama o próximo middleware
+}
+
+//Session (para gerenciar sessões de usuários no Express)
+req.session = { nome: 'Luiz' } //cria uma sessão para o usuário
+
+
+
