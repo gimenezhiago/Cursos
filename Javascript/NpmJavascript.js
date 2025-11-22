@@ -230,5 +230,24 @@ function meuMiddleware(req, res, next) { //next é uma função que chama o pró
 //Session (para gerenciar sessões de usuários no Express)
 req.session = { nome: 'Luiz' } //cria uma sessão para o usuário
 
+//Dotenv (para gerenciar variáveis de ambiente no Node.js)
+require('dotenv').config() //carrega as variáveis de ambiente do arquivo .env
+const porta = process.env.PORTA || 3000 //obtém a variável de ambiente PORTA ou usa 3000 como padrão
+app.listen(porta, () => {
+    console.log(`Servidor rodando na porta ${porta}`)
+})
 
+//Mongoose (ODM para MongoDB no Node.js)
+const mongoose = require('mongoose') //importa o mongoose
+mongoose.connect('mongodb://localhost:27017/meu-banco', { useNewUrlParser: true, useUnifiedTopology: true }) //conecta ao banco de dados MongoDB
+const usuarioSchema = new mongoose.Schema({
+    nome: String,
+})
 
+//app.emit (para emitir eventos personalizados no Node.js)
+app.emit('eventoPersonalizado', 'Olá Mundo!') //emite o evento personalizado com uma mensagem
+
+//app.on (para ouvir eventos personalizados no Node.js)
+app.on('eventoPersonalizado', (mensagem) => {
+    console.log(mensagem) //exibe a mensagem do evento personalizado
+})
