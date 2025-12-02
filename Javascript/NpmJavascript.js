@@ -251,3 +251,22 @@ app.emit('eventoPersonalizado', 'Olá Mundo!') //emite o evento personalizado co
 app.on('eventoPersonalizado', (mensagem) => {
     console.log(mensagem) //exibe a mensagem do evento personalizado
 })
+
+//Session com express-session (para gerenciar sessões de usuários no Express)
+const session = require('express-session') //importa o express-session
+const sessionOptions = ({
+    secret: 'chave-secreta', //chave secreta para assinar o cookie da sessão
+    store: new session.MemoryStore(), //armazenamento da sessão (padrão é em memória)
+    resave: false, //não salva a sessão se não houver alterações
+    saveUninitialized: false, //não cria uma sessão até que algo seja armazenado nela
+    cookie: {
+        maxAge: 1000 * 60 * 60 * 24, //duração do cookie da sessão (1 dia)
+        httpOnly: true //cookie acessível apenas pelo protocolo HTTP
+    }
+})
+app.use(session(sessionOptions)) //usa o express-session com as opções definidas
+
+//Flash Messages (para exibir mensagens temporárias para o usuário no Express)
+const flash = require('connect-flash') //importa o connect-flash
+app.use(flash()) //usa o connect-flash
+req.flash('success', 'Usuário criado com sucesso!') //define uma mensagem flash de sucesso
