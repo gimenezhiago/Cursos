@@ -270,3 +270,24 @@ app.use(session(sessionOptions)) //usa o express-session com as opções definid
 const flash = require('connect-flash') //importa o connect-flash
 app.use(flash()) //usa o connect-flash
 req.flash('success', 'Usuário criado com sucesso!') //define uma mensagem flash de sucesso
+
+//res.locals (para disponibilizar variáveis para as views no Express)
+app.use((req, res, next) => {
+    res.locals.success = req.flash('success') //disponibiliza a mensagem flash de sucesso para as views
+    next()
+})
+
+//Para rederizar a mensagem na view (EJS)
+//<% if (success && success.length > 0) { %> 
+//    <div>
+//        <%= success %> //usar <%= para renderizar texto
+//        <%- success %> //usar <%- para renderizar HTML
+//        <%# comentário %> //usar <%# para comentários
+//    </div>
+//<% } %>
+
+//Includes (para incluir arquivos parciais nas views EJS)
+//<%- include('includes/header') %> //inclui o arquivo header.ejs da pasta includes, que contem o cabeçalho
+//<%- include('includes/footer') %> //inclui o arquivo footer.ejs da pasta includes, que contem o rodapé
+
+
