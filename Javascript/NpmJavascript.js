@@ -274,6 +274,7 @@ req.flash('success', 'Usuário criado com sucesso!') //define uma mensagem flash
 //res.locals (para disponibilizar variáveis para as views no Express)
 app.use((req, res, next) => {
     res.locals.success = req.flash('success') //disponibiliza a mensagem flash de sucesso para as views
+    res.locals.error = 'erro' //disponibiliza uma variável de erro para as views
     next()
 })
 
