@@ -291,4 +291,23 @@ app.use((req, res, next) => {
 //<%- include('includes/header') %> //inclui o arquivo header.ejs da pasta includes, que contem o cabeçalho
 //<%- include('includes/footer') %> //inclui o arquivo footer.ejs da pasta includes, que contem o rodapé
 
+//Helmets (para proteger a aplicação Express com cabeçalhos HTTP)
+const helmet = require('helmet') //importa o helmet
+app.use(helmet()) //usa o helmet para proteger a aplicação
 
+//Csurf (para proteger a aplicação Express contra ataques CSRF)
+const csrf = require('csurf') //importa o csurf
+app.use(csrf()) //usa o csurf para proteger a aplicação
+exports.checkCsrfError = (err, req, res, next) => {
+    if (err && err.code === 'EBADCSRFTOKEN') {
+        return res.render('404') //renderiza a página 404 em caso de erro CSRF
+    }
+}
+app.use(checkCsrfError)
+exports.csrfMiddleware = (req, res, next) => {
+    res.locals.csrfToken = req.csrfToken() //disponibiliza o token CSRF para as views
+    next()
+}
+app.use(csrfMiddleware)
+//No formulário EJS (incluir o token CSRF como um campo oculto)
+//<input type="hidden" name="_csrf" value="<%= csrfToken %>">
